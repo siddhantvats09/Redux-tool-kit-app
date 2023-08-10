@@ -1,16 +1,19 @@
 import React from 'react'
 import './App.css'
-import Navbar from './components/Navbar'
-import UserDetails from './components/Userdetails'
+import Home from './components/Home'
+import { Routes,BrowserRouter,Route } from 'react-router-dom'
+import Budgetcreationpage from './components/Budgetcreationpage'
 
 
 
 const App = () => {
   return (
-    <div>
-    <Navbar/>
-    <UserDetails/>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/create" element={<Budgetcreationpage/>}/>
+    </Routes>
+    </BrowserRouter>
   )
 }
 
